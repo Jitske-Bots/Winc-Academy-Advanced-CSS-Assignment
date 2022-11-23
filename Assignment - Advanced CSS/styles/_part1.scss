@@ -1,0 +1,12 @@
+.part-1 {
+    position: relative;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+.box {
+    margin: auto;
+    @include flexCenter(column);
+    @include card();
+    margin-top: $standardMargin;
+}
