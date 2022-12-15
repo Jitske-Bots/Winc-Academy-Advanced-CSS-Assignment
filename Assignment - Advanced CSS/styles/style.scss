@@ -1,0 +1,48 @@
+@import "./constants";
+@import "./part1";
+@import "./part2";
+@import "./part3";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color:  #c3cfe2;
+}
+@media (max-width: $breakpoint-tablet) {
+    body {
+        .wrapper {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .part-1 {
+            font-size: 30px;
+        }
+        .part-2 {
+            font-size: 30px;
+        }
+        .part-3 {
+            font-size: 30px;
+        }
+    }
+}
+@media (max-width: $breakpoint-mobile) {
+    body {
+        .wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+        .part-1 {
+            font-size: 20px;
+        }
+        .part-2 {
+            font-size: 20px;
+        }
+        .part-3 {
+            font-size: 20px;
+        }
+
+    }
+}
