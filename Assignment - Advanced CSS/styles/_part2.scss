@@ -1,0 +1,41 @@
+.part-2 {
+    margin: auto;
+    margin-top: $standardMargin;
+    width: 60%;
+    text-align: center;
+    align-items: center;
+
+}
+.wrapper {
+    margin: auto;
+    width: 40%;
+    height: auto;
+    margin-top: $standardMargin;
+    border: 2px solid black;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    .card {
+        @include flexCenter(row);
+        background-image: url("/download.png");
+        height: 220px;
+        width: 220px;
+        button {
+            visibility: hidden;
+            width: 80px;
+        }
+        &:hover {
+            background-image: none;
+            background-color: rgb(27, 29, 34);
+            transition-duration: 500ms;
+            transition-timing-function: ease-out;
+            button {
+                visibility: visible;
+            }
+        }
+    }
+}

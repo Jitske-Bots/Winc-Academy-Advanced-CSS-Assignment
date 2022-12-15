@@ -1,0 +1,62 @@
+$boxShadow: 6px 6px 8px #aaaaaa;
+$standardMargin: 5%;
+$breakpoint-tablet: 750px;
+$breakpoint-mobile: 550px;
+$socialsPosition: -175px;
+
+@mixin socialsLogo {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 40px;
+    height: 40px
+}
+
+@mixin socials {
+    width: 240px;
+    height: 60px;
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin flexStart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;       
+}
+
+@mixin card {
+    border-radius: 8%;
+    box-shadow: $boxShadow;
+    height: auto;
+    width: 200px;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(104,109,224,1) 20%);
+    .image {
+        margin-top: 10%;
+        img {
+            border-radius: 100%;
+            border: 3px solid white;
+            height: 60px;
+        }
+    }
+
+}
+@mixin socialsHover {
+    animation-name: socialsMove;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    &:after {
+        animation-name: socialsMoveBack;
+        animation-duration: 500ms;
+    }
+}
+@mixin socialsPosition($top) {
+    position: absolute;
+    top: $top;
+    right: $socialsPosition;
+}
